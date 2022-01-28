@@ -1,7 +1,7 @@
-# Single price grid component
+# Single Price Grid Component
 
 ## Sobre o Desafio
 
 - Criar um cartão responsivo utilizando HTML e CSS grid e flexbox.
 
-# SinglePriceGridComponent
+
