@@ -6,13 +6,20 @@ html, body {
     font-size: 16px;
 }
 /* container grid */
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
-    width: 800px;
-    height: 500px;
-    margin: 50px auto;
+    width: 60vw;
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 40vh 40vh;
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 45vh 45vh;
     grid-template-areas: "section1 section1"         
                           "section2 section3";
     align-content: center;
@@ -25,10 +32,13 @@ html, body {
 /* section1 */
 .section1 {
     grid-area: section1;
+    background-color: #ccc;
+    display: flex;
+
 }
 
 .box1{
-    margin: 30px;
+    margin: 30px;   
 }
 
 .box1 h1{
@@ -37,7 +47,7 @@ html, body {
 }
 
 .box1 h2{
-    color:hsl(71, 73%, 54%);
+    color:hsl(71, 57%, 48%);
     font-size: 1.7rem;
 }
 
@@ -50,6 +60,7 @@ html, body {
 .section2 {
     background-color: hsl(179, 62%, 43%);
     grid-area: section2;
+    display: flex;
 }
 
 .box2{
@@ -91,13 +102,14 @@ html, body {
     font-size: 1.4rem;
     color: #fff;
     background-color: hsl(71, 73%, 54%);
-
     width: 330px;
     height: 50px;
     border: none;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     opacity: 1;
+    cursor: pointer;
+    transition: .5s;
 }
 
 .btn:hover{
@@ -108,6 +120,7 @@ html, body {
 .section3 {
     background-color: hsla(179, 55%, 49%, 0.912);
     grid-area: section3;
+    display: flex;
 }
 
 .box3{
@@ -129,37 +142,33 @@ html, body {
 }
 
 /* Responsive */
-@media only screen and (max-width: 600px) {
+@media (max-width: 800px) {
 
+    body{
+        display: flex;
+        align-items: flex-start;
+    }
+    
     .container {
-        margin: 20px auto;
+        width: 90vw;
         display: grid;
-        width: 300px;
-        height: 900px;
-        grid-template-columns: 100%;
-        grid-template-rows: 300px 300px 300px;/* 1fr 1fr 1fr; */
+        grid-template-columns: 90vw;
+        grid-template-rows: auto;
         grid-template-areas: "section1"         
-                             "section2"
-                             "section3";
+                              "section2"
+                              "section3";
+        align-content: center;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;       
     }
 
     .btn{
-        width: 240px;
-    }
-      
-    .box1 h1{
-        font-size: 1.8rem;
-    }
-    
-    .box1 h2{
-        color:hsl(71, 73%, 54%);
         font-size: 1.2rem;
-    }
-    
-    .box1 p{
-        color: hsl(218, 22%, 67%);;
-        font-size: 1.2rem;
-    }
+        width: 200px;
+    }    
+
   }
 
 
